@@ -47,8 +47,8 @@ services:
 
 
   bl45p-mo-panda-01:
-    files: ["ioc.yaml"]
+    files: ["start.sh", "stop.sh", "liveness.sh"]
   bl45p-mo-panda-02:
-    files: ["ioc.yaml"]
+    files: ["start.sh", "stop.sh", "liveness.sh"]
   bl45p-mo-brick-01:
     files: ["ioc.yaml"]
