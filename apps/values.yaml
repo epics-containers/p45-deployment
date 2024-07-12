@@ -3,7 +3,7 @@ destination:
   name: pollux
   namespace: bl45p
 source:
-  repoURL: https://github.com/epics-containers/bl45p-apps.git
+  repoURL: https://github.com/epics-containers/bl45p.git
   targetRevision: argo-update
 
 # list of services to deploy. Each item is of the form:
