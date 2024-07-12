@@ -1,8 +1,6 @@
 {{- $currentScope := . -}}
-{{- range $service, $settings := .Values.services -}}
-# if there are no settings, make settings just {enabled: true)
-{{- $settings := default (dict "enabled" true) $settings -}}
-# set removed to true to take this application off of the cluster
+{{- range $service, $settings := .Values.services }}
+{{ $settings := default (dict "enabled" true) $settings -}}
 {{ if ne $settings.removed true }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -35,7 +33,7 @@ spec:
         - name: global.enabled
           value: {{ $settings.enabled | quote }}
       {{- end -}}
-      {{ if $settings.values -}}
+      {{ if $settings.values }}
       values: |
 {{ toYaml $settings.values | indent 8 }}
       {{- end }}

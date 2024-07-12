@@ -7,7 +7,7 @@ metadata:
 spec:
   project: bl45p
   destination:
-    server: argus
+    name: argus
     namespace: bl45p
   source:
     path: apps
