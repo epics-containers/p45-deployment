@@ -16,7 +16,7 @@ spec:
     name: {{ $currentScope.Values.destination.name }}
   source:
     repoURL: {{ default $currentScope.Values.source.repoURL $settings.repoURL }}
-    path: {{ services/$service }}
+    path: {{ "services/"$service }}
     targetRevision: {{ default $currentScope.Values.source.targetRevision $settings.targetRevision }}
     helm:
       version: v3
