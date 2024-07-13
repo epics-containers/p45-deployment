@@ -21,6 +21,8 @@ source:
 #            the path is always services/<service> within that repo
 #   enabled: set to false to turn off an IOC
 #   removed: set to true to remove the app from cluster
+#   files: list of files from the service's config folder to be made into
+#          fileParameters to helm
 
 services:
   # shared epics services ######################################################
