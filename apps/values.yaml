@@ -33,8 +33,8 @@ services:
   bl45p-ea-dcam-01:
   bl45p-ea-dcam-02:
   bl45p-mo-panda-01:
-    files: ["start.sh"]
+    files: ["start.sh", "liveness.sh", "stop.sh"]
   bl45p-mo-panda-02:
-    files: ["start.sh"]
+    files: ["start.sh", "liveness.sh", "stop.sh"]
   bl45p-mo-brick-01:
     files: ["ioc.yaml"]
