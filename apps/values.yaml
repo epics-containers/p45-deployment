@@ -31,6 +31,7 @@ services:
   # epics iocs #################################################################
 
   bl45p-ea-dcam-01:
+    enabled: false
   bl45p-ea-dcam-02:
   bl45p-mo-panda-01:
     files: ["start.sh", "liveness.sh", "stop.sh"]

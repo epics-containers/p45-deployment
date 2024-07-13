@@ -1,6 +1,7 @@
 {{- $currentScope := . -}}
 {{- range $service, $settings := .Values.services }}
-{{ $settings := default (dict "enabled" true) $settings -}}
+{{- /* Make sure settings is an empty dict if it is currently nil */ -}}
+{{ $settings := default dict $settings -}}
 {{ if ne $settings.removed true }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -30,12 +31,10 @@ spec:
           path: config/{{ . }}
       {{- end -}}
       {{- end }}
-      {{- if eq $settings.enabled false }}
       parameters:
         - name: global.enabled
-          value: {{ $settings.enabled | quote }}
-      {{- end -}}
-      {{ if $settings.values }}
+          value: {{ eq $settings.enabled false | ternary false true | quote }}
+      {{- if $settings.values }}
       values: |
 {{ toYaml $settings.values | indent 8 }}
       {{- end }}
