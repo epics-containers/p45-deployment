@@ -34,7 +34,6 @@ spec:
       parameters:
         - name: global.enabled
           value: {{ eq $settings.enabled false | ternary false true | quote }}
-      {{- if $settings.values }}
   syncPolicy:
     automated:
       prune: true
