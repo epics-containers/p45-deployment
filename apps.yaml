@@ -12,7 +12,7 @@ spec:
   source:
     path: apps
     repoURL: https://github.com/epics-containers/bl45p-apps.git
-    targetRevision: review
+    targetRevision: main
     helm:
       version: v3
   syncPolicy:
