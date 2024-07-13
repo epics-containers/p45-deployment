@@ -45,10 +45,9 @@ services:
       P: BL45P-EA-DIFF-01
       ID: bl45p-ea-detector-02
 
-
   bl45p-mo-panda-01:
-    files: ["start.sh", "stop.sh", "liveness.sh"]
+    files: ["stop.sh", "liveness.sh", "start.sh"]
   bl45p-mo-panda-02:
-    files: ["start.sh", "stop.sh", "liveness.sh"]
+    files: ["stop.sh", "liveness.sh", "start.sh"]
   bl45p-mo-brick-01:
     files: ["ioc.yaml"]
