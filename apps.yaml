@@ -17,7 +17,6 @@ spec:
       version: v3
       valueFiles:
         - https://raw.githubusercontent.com/epics-containers/bl45p/main/services/beamline_values.yaml
-        - test.yaml
   syncPolicy:
     automated:
       prune: true
