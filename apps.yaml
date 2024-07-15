@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bl45p
+  name: bl45p-root
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:

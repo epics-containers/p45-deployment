@@ -6,6 +6,15 @@
 # services should be running on the cluster. It is recommended that this repo
 # be updated by a CI/CD pipeline or configuration tools only.
 
+# For live start/stop of services use the argocd CLI to override the enabled
+# parameter or removed parameter in the services dictionary below.
+
+# The apps that deploy each service are created via the .argocd directory in
+# the source repo. .argocd is a helm chart that creates an ArgoCD app for each
+# service listed in the services dictionary below. Each service is itself a
+# helm chart that is sourced from the services/<service> directory in the
+# source repo.
+
 project: bl45p
 
 appDestination:
@@ -17,16 +26,19 @@ serviceDestination:
   namespace: bl45p
 
 source:
+  # These defaults are used to fetch the .argocd directory which creates the
+  # service apps. They are also defaults for the service apps themselves. But
+  # each service can override these defaults.
   repoURL: https://github.com/epics-containers/bl45p.git
   targetRevision: add-extra-app-layer
 
-# list of services to deploy. Each item is of the form:
-# - service: service name as it appears in K8S (statefulset/deployment name)
+# dictionary of services to deploy. Each item is of the form:
+# service: service name as it appears in K8S (statefulset/deployment name)
 #   targetRevision: optional override for targetRevision above
 #   repoURL: optional override for git repo to source the helm chart from
 #            the path is always services/<service> within that repo
-#   enabled: set to false to turn off an IOC
-#   removed: set to true to remove the app from cluster
+#   enabled: set to false to turn off an IOC (participating services only)
+#   removed: set to true to remove the app from the app of apps
 
 services:
   # shared epics services ######################################################
