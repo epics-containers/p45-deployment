@@ -48,7 +48,7 @@ services:
   # daq services ###############################################################
   daq-rabbitmq:
     # this service always restarts if you don't pin it (must have a random seed)
-    targetRevision: 2024.7.5
+    targetRevision: 2024.7.6
   daq-blueapi:
   daq-nexus:
 
