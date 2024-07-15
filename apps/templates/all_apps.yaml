@@ -21,19 +21,18 @@ spec:
     targetRevision: {{ default $currentScope.Values.source.targetRevision $settings.targetRevision }}
     helm:
       version: v3
-      valueFiles:
-        - ../beamline_values.yaml
-        - values.yaml
-      {{- if $settings.files }}
-      fileParameters:
-      {{-  range $settings.files  }}
-        - name: global.files.{{ . | replace "." "_dot_" }}
-          path: config/{{ . }}
-      {{- end -}}
-      {{- end }}
       parameters:
         - name: global.enabled
           value: {{ eq $settings.enabled false | ternary false true | quote }}
+      valuesObject:
+        project: {{ default $currentScope.Release.Namespace $currentScope.Values.project }}
+        destination:
+          name: {{ $service }}-svc
+          namespace: {{ $currentScope.Release.Namespace }}
+        source:
+          repoURL: {{ default $currentScope.Values.source.repoURL $settings.repoURL }}
+          targetRevision: {{ default $currentScope.Values.source.targetRevision $settings.targetRevision }}
+          path: services/{{ $service }}
   syncPolicy:
     automated:
       prune: true
