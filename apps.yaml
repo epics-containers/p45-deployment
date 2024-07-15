@@ -15,8 +15,6 @@ spec:
     targetRevision: add-extra-app-layer
     helm:
       version: v3
-      valueFiles:
-        - https://raw.githubusercontent.com/epics-containers/bl45p/main/services/beamline_values.yaml
   syncPolicy:
     automated:
       prune: true

@@ -13,15 +13,14 @@ metadata:
 spec:
   project: {{ default $currentScope.Release.Namespace $currentScope.Values.project }}
   destination:
-    namespace: {{ $currentScope.Values.destination.namespace }}
-    name: argus
+    namespace: {{ $currentScope.Values.appDestination.namespace }}
+    name: {{ $currentScope.Values.appDestination.name }}
   source:
     repoURL: {{ default $currentScope.Values.source.repoURL $settings.repoURL }}
     path: .argocd
     targetRevision: {{ default $currentScope.Values.source.targetRevision $settings.targetRevision }}
     helm:
       version: v3
-      releaseName: {{ $service }}
       valueFiles:
         - values.yaml
         # include the service's values in the app so it can render the config files
@@ -32,8 +31,8 @@ spec:
       valuesObject:
         project: {{ default $currentScope.Release.Namespace $currentScope.Values.project }}
         destination:
-          name: {{ $service }}
-          namespace: {{ $currentScope.Release.Namespace }}
+          name: {{ $currentScope.Values.serviceDestination.name }}
+          namespace: {{ $currentScope.Values.serviceDestination.namespace }}
         source:
           repoURL: {{ default $currentScope.Values.source.repoURL $settings.repoURL }}
           targetRevision: {{ default $currentScope.Values.source.targetRevision $settings.targetRevision }}

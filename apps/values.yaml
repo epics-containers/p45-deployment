@@ -7,9 +7,15 @@
 # be updated by a CI/CD pipeline or configuration tools only.
 
 project: bl45p
-destination:
+
+appDestination:
+  name: argus
+  namespace: bl45p
+
+serviceDestination:
   name: pollux
   namespace: bl45p
+
 source:
   repoURL: https://github.com/epics-containers/bl45p.git
   targetRevision: add-extra-app-layer
