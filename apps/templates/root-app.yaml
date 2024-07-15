@@ -1,0 +1,40 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ .Release.name }}
+  namespace: {{ .Release.Namespace }}
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: {{ .Values.project }}
+  destination:
+    name: {{ .Values.appDestination.name }}
+    namespace: {{ .Values.appDestination.namespace }}
+  source:
+    repoURL: {{ .Values.source.repoURL }}
+    path: .argocd
+    targetRevision: {{ .Values.source.targetRevision }}
+    helm:
+      version: v3
+      valuesObject:
+        # project and destination are the same for all services
+        project: {{ .Values.project }}
+        destination:
+          name: {{ .Values.serviceDestination.name }}
+          namespace: {{ .Values.serviceDestination.namespace }}
+        # global values for services source
+        source:
+          repoURL: {{ .Values.source.repoURL }}
+          targetRevision: {{ .Values.source.targetRevision }}
+        # override values for a dictionary of services
+        # may include repoURL, targetRevision, enabled, removed
+        services:
+          {{- .Values.services | toYaml | nindent 10 }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      # don't restart pods unless there has been a change
+      - ApplyOutOfSyncOnly=true
+      - RespectIgnoreDifferences=true
