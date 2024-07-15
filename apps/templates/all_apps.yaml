@@ -32,7 +32,7 @@ spec:
       valuesObject:
         project: {{ default $currentScope.Release.Namespace $currentScope.Values.project }}
         destination:
-          name: {{ $service }}-svc
+          name: {{ $service }}
           namespace: {{ $currentScope.Release.Namespace }}
         source:
           repoURL: {{ default $currentScope.Values.source.repoURL $settings.repoURL }}
