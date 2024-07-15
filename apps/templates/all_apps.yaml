@@ -22,6 +22,7 @@ spec:
     helm:
       version: v3
       valueFiles:
+        - values.yaml
         # include the service's values in the app so it can render the config files
         - ../services/{{ $service }}/values.yaml
       parameters:
