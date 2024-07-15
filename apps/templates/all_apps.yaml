@@ -17,10 +17,13 @@ spec:
     name: {{ $currentScope.Values.destination.name }}
   source:
     repoURL: {{ default $currentScope.Values.source.repoURL $settings.repoURL }}
-    path: services/{{ $service }}
+    path: .argocd
     targetRevision: {{ default $currentScope.Values.source.targetRevision $settings.targetRevision }}
     helm:
       version: v3
+      valueFiles:
+        # include the service's values in the app so it can render the config files
+        - ../services/{{ $service }}/values.yaml
       parameters:
         - name: global.enabled
           value: {{ eq $settings.enabled false | ternary false true | quote }}
