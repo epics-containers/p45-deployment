@@ -39,24 +39,25 @@ source:
 #            the path is always services/<service> within that repo
 #   enabled: set to false to turn off an IOC (participating services only)
 #   removed: set to true to remove the app from the app of apps
+# for all defaults use the empty dictionary {}
 
 services:
   # shared epics services ######################################################
-  epics-pvcs:
-  epics-opis:
+  epics-pvcs: {}
+  epics-opis: {}
 
   # daq services ###############################################################
   daq-rabbitmq:
     # this service always restarts if you don't pin it (must have a random seed)
     targetRevision: 2024.7.6
-  daq-blueapi:
-  daq-nexus:
+  daq-blueapi: {}
+  daq-nexus: {}
 
   # epics iocs #################################################################
 
   bl45p-ea-dcam-01:
     enabled: false
-  bl45p-ea-dcam-02:
-  bl45p-mo-panda-01:
-  bl45p-mo-panda-02:
-  bl45p-mo-brick-01:
+  bl45p-ea-dcam-02: {}
+  bl45p-mo-panda-01: {}
+  bl45p-mo-panda-02: {}
+  bl45p-mo-brick-01: {}
