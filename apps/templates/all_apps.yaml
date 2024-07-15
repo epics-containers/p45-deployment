@@ -30,13 +30,13 @@ spec:
           value: {{ eq $settings.enabled false | ternary false true | quote }}
       valuesObject:
         project: {{ default $currentScope.Release.Namespace $currentScope.Values.project }}
+        service: {{ $service }}
         destination:
           name: {{ $currentScope.Values.serviceDestination.name }}
           namespace: {{ $currentScope.Values.serviceDestination.namespace }}
         source:
           repoURL: {{ default $currentScope.Values.source.repoURL $settings.repoURL }}
           targetRevision: {{ default $currentScope.Values.source.targetRevision $settings.targetRevision }}
-          path: services/{{ $service }}
   syncPolicy:
     automated:
       prune: true
