@@ -43,20 +43,20 @@ source:
 services:
   # shared epics services ######################################################
   epics-pvcs:
-  epics-opis:
+  # epics-opis:
 
-  # daq services ###############################################################
-  daq-rabbitmq:
-    # this service always restarts if you don't pin it (must have a random seed)
-    targetRevision: 2024.7.5
-  daq-blueapi:
-  daq-nexus:
+  # # daq services ###############################################################
+  # daq-rabbitmq:
+  #   # this service always restarts if you don't pin it (must have a random seed)
+  #   targetRevision: 2024.7.5
+  # daq-blueapi:
+  # daq-nexus:
 
-  # epics iocs #################################################################
+  # # epics iocs #################################################################
 
-  bl45p-ea-dcam-01:
-    enabled: false
-  bl45p-ea-dcam-02:
-  bl45p-mo-panda-01:
-  bl45p-mo-panda-02:
-  bl45p-mo-brick-01:
+  # bl45p-ea-dcam-01:
+  #   enabled: false
+  # bl45p-ea-dcam-02:
+  # bl45p-mo-panda-01:
+  # bl45p-mo-panda-02:
+  # bl45p-mo-brick-01:
