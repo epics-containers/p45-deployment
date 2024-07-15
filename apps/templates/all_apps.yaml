@@ -14,7 +14,7 @@ spec:
   project: {{ default $currentScope.Release.Namespace $currentScope.Values.project }}
   destination:
     namespace: {{ $currentScope.Values.destination.namespace }}
-    name: {{ $currentScope.Values.destination.name }}
+    name: argus
   source:
     repoURL: {{ default $currentScope.Values.source.repoURL $settings.repoURL }}
     path: .argocd
