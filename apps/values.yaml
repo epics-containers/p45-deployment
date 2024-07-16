@@ -12,7 +12,7 @@ destination:
   namespace: bl45p
 source:
   repoURL: https://github.com/epics-containers/bl45p.git
-  targetRevision: main
+  targetRevision: 2024.7.7
 
 # list of services to deploy. Each item is of the form:
 # - service: service name as it appears in K8S (statefulset/deployment name)
@@ -31,8 +31,6 @@ services:
 
   # daq services ###############################################################
   daq-rabbitmq:
-    # this service always restarts if you don't pin it (must have a random seed)
-    targetRevision: 2024.7.5
   daq-blueapi:
   daq-nexus:
 
@@ -42,8 +40,5 @@ services:
     enabled: false
   bl45p-ea-dcam-02:
   bl45p-mo-panda-01:
-    files: ["start.sh", "liveness.sh", "stop.sh"]
   bl45p-mo-panda-02:
-    files: ["start.sh", "liveness.sh", "stop.sh"]
   bl45p-mo-brick-01:
-    files: ["ioc.yaml"]
