@@ -46,4 +46,4 @@ services:
   bl45p-mo-panda-02:
     targetRevision: 2024.7.8
   bl45p-mo-brick-01:
-    targetRevision: 2024.7.8
+    targetRevision: 2024.7.9
