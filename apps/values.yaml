@@ -12,7 +12,7 @@ destination:
   namespace: bl45p
 source:
   repoURL: https://github.com/epics-containers/bl45p.git
-  targetRevision: 2024.7.7
+  targetRevision: main
 
 # list of services to deploy. Each item is of the form:
 # - service: service name as it appears in K8S (statefulset/deployment name)
