@@ -31,9 +31,10 @@ services:
 
   # daq services ###############################################################
   daq-rabbitmq:
-  daq-blueapi:
   daq-nexus:
 
+  daq-blueapi:
+    targetRevision: bugfix
   # epics iocs #################################################################
 
   bl45p-ea-dcam-01:
