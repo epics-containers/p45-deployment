@@ -31,20 +31,19 @@ services:
 
   # daq services ###############################################################
   daq-rabbitmq:
+  daq-blueapi:
   daq-nexus:
 
-  daq-blueapi:
-    targetRevision: bugfix
   # epics iocs #################################################################
 
   bl45p-ea-dcam-01:
     enabled: false
-    targetRevision: 2024.7.8
+    targetRevision: 2024.8.2
   bl45p-ea-dcam-02:
-    targetRevision: bugfix
+    targetRevision: 2024.8.2
   bl45p-mo-panda-01:
-    targetRevision: bugfix
+    targetRevision: 2024.8.2
   bl45p-mo-panda-02:
-    targetRevision: bugfix
+    targetRevision: 2024.8.2
   bl45p-mo-brick-01:
     targetRevision: 2024.7.8
