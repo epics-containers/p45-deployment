@@ -1,6 +1,8 @@
-# This file configures an ArgoCD app of apps that represent a beamline or
-# group of accelerator IOCs and services. The details of the services are
-# configured in the separate repo indicated by repoURL.
+# yaml-language-server: $schema=https://github.com/epics-containers/ec-helm-charts/releases/download/4.0.0/argocd-apps.schema.json
+
+# This file configures an ArgoCD app of apps that represent a
+# group of beamline or accelerator IOCs and services. The configuration of the
+# services are in the separate repo indicated by repoURL.
 
 # This repostory only controls which services and which versions of those
 # services should be running on the cluster. It is recommended that this repo
@@ -11,7 +13,7 @@ destination:
   name: pollux
   namespace: bl45p
 source:
-  repoURL: https://github.com/epics-containers/bl45p.git
+  repoURL: https://github.com/epics-containers/p45-services
   targetRevision: main
 
 # list of services to deploy. Each item is of the form:
@@ -19,10 +21,8 @@ source:
 #   targetRevision: optional override for targetRevision above
 #   repoURL: optional override for git repo to source the helm chart from
 #            the path is always services/<service> within that repo
-#   enabled: set to false to turn off an IOC
-#   removed: set to true to remove the app from cluster
-#   files: list of files from the service's config folder to be made into
-#          fileParameters to helm
+#   enabled: set to false to stop a service
+#   removed: set to true to remove the service from the cluster
 
 services:
   # shared epics services ######################################################
