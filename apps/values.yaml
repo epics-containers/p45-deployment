@@ -28,6 +28,7 @@ services:
   # shared epics services ######################################################
   epics-pvcs:
   epics-opis:
+    ec_service: true
 
   # daq services ###############################################################
   daq-rabbitmq:
@@ -37,14 +38,17 @@ services:
   # epics iocs #################################################################
 
   bl45p-ea-dcam-01:
-    enabled: false
-    removed: true
+    ec_service: true
     targetRevision: 2024.8.2
   bl45p-ea-dcam-02:
+    ec_service: true
     targetRevision: bugfix
   bl45p-mo-panda-01:
+    ec_service: true
     targetRevision: 2024.8.2
   bl45p-mo-panda-02:
+    ec_service: true
     targetRevision: 2024.8.2
   bl45p-mo-brick-01:
+    ec_service: true
     targetRevision: 2024.8.2
