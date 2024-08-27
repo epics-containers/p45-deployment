@@ -38,6 +38,7 @@ services:
 
   bl45p-ea-dcam-01:
     enabled: false
+    removed: true
     targetRevision: 2024.8.2
   bl45p-ea-dcam-02:
     targetRevision: bugfix
