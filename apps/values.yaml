@@ -48,7 +48,6 @@ services:
     targetRevision: 2024.8.2
   bl45p-mo-panda-02:
     ec_service: true
-
     targetRevision: 2024.8.2
   bl45p-mo-brick-01:
     ec_service: true
