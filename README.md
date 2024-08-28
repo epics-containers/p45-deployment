@@ -1,5 +1,10 @@
-# beamline bl45p Argo CD apps
+# p45 IOC Instances and Services
 
-For deploying the services described in https://github.com/epics-containers/bl45p
+This repository holds the definition of Argocd deployed ec services. Each sub folder of the 'services' directory of an ec 'services repository' is mapped to an Argocd App which is managed by a root App.
 
-
+## Deployment
+To deploy the Argocd root App:
+```
+# Login to pollux cluster
+kubectl apply -n p45-beamline -f apps.yaml
+```
