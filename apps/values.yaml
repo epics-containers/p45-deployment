@@ -42,7 +42,7 @@ services:
     targetRevision: 2024.8.2
   bl45p-ea-dcam-02:
     ec_service: true
-    targetRevision: bugfix
+    targetRevision: 2024.8.2
   bl45p-mo-panda-01:
     ec_service: true
     targetRevision: 2024.8.2
