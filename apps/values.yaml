@@ -33,7 +33,7 @@ services:
   # daq services ###############################################################
   daq-rabbitmq:
   daq-blueapi:  # https://github.com/DiamondLightSource/blueapi/issues/620
-    enabled: false
+    removed: true
   daq-nexus:
 
   # epics iocs #################################################################
@@ -41,7 +41,7 @@ services:
   bl45p-ea-dcam-01:
     ec_service: true
     targetRevision: 2024.8.2
-    enabled: false
+    removed: true
   bl45p-ea-dcam-02:
     ec_service: true
     targetRevision: 2024.8.2
