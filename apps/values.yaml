@@ -11,7 +11,7 @@
 project: bl45p
 destination:
   name: pollux
-  namespace: bl45p
+  namespace: p45-beamline
 source:
   repoURL: https://github.com/epics-containers/p45-services
   targetRevision: main
