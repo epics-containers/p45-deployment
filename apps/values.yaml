@@ -27,8 +27,7 @@ services:
   epics-opis:
     ec_service: true
   daq-rabbitmq:
-  daq-blueapi:  # https://github.com/DiamondLightSource/blueapi/issues/620
-    removed: true
+  daq-blueapi:
   daq-nexus:
 
 ec_services:
