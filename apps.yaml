@@ -5,14 +5,14 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: bl45p
+  project: p45-beamline
   destination:
     name: argus
-    namespace: bl45p
+    namespace: p45-beamline
   source:
     path: apps
     repoURL: https://github.com/epics-containers/bl45p-apps.git
-    targetRevision: main
+    targetRevision: switch-namespace
     helm:
       version: v3
   syncPolicy:
