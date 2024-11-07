@@ -43,13 +43,13 @@ ec_services:
     enabled: true
     targetRevision: main
   bl45p-ea-dcam-01:
-    targetRevision: 2024.10.1
+    targetRevision: 2024.11.1
     removed: true
   bl45p-ea-dcam-02:
-    targetRevision: 2024.10.1
+    targetRevision: 2024.11.1
   bl45p-mo-panda-01:
-    targetRevision: 2024.10.1
+    targetRevision: 2024.11.1
   bl45p-mo-panda-02:
-    targetRevision: 2024.10.1
+    targetRevision: 2024.11.1
   bl45p-mo-brick-01:
-    targetRevision: 2024.10.1
+    targetRevision: 2024.11.1
