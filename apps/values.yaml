@@ -10,7 +10,7 @@
 
 project: bl45p
 destination:
-  name: pollux
+  name: argus
   namespace: p45-beamline
 source:
   repoURL: https://github.com/epics-containers/p45-services
