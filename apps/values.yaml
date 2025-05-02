@@ -25,9 +25,9 @@ services:
   #     removed: set to true to remove the service from the cluster
   epics-pvcs:
   epics-opis:
-  daq-rabbitmq:
-  daq-blueapi:
-  daq-nexus:
+  # daq-rabbitmq:
+  # daq-blueapi:
+  # daq-nexus:
 
 ec_services:
   # Services which have implemented support for an "enabled" parameter.
