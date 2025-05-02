@@ -8,9 +8,9 @@
 # services should be running on the cluster. It is recommended that this repo
 # be updated by a CI/CD pipeline or configuration tools only.
 
-project: p45
+project: p45-beamline
 destination:
-  name: argus
+  name: pollux
   namespace: p45-beamline
 source:
   repoURL: https://github.com/epics-containers/p45-services
