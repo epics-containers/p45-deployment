@@ -25,9 +25,9 @@ services:
   #     removed: set to true to remove the service from the cluster
   epics-pvcs:
   epics-opis:
-  daq-rabbitmq:
-  daq-blueapi:
-  daq-nexus:
+  # daq-rabbitmq:
+  # daq-blueapi:
+  # daq-nexus:
 
 ec_services:
   # Services which have implemented support for an "enabled" parameter.
@@ -39,16 +39,19 @@ ec_services:
   #     removed: set to true to remove the service from the cluster
   #     enabled: set to false to stop a service
   p45-ea-test-01:
-    enabled: true
-    targetRevision: main
+    enabled: false
   bl45p-ea-dcam-01:
     targetRevision: 2024.11.1
-    removed: true
+    enabled: false
   bl45p-ea-dcam-02:
     targetRevision: 2024.11.1
+    enabled: false
   bl45p-mo-panda-01:
     targetRevision: 2024.11.1
+    enabled: false
   bl45p-mo-panda-02:
     targetRevision: 2024.11.1
+    enabled: false
   bl45p-mo-brick-01:
     targetRevision: 2024.11.1
+    enabled: false
