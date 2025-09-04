@@ -54,7 +54,7 @@ ec_services:
     enabled: false
   bl45p-mo-brick-01:
     targetRevision: 2024.11.1
-    enabled: false
+    enabled: true
   nfsv2-tftp:
     enabled: true
     targetRevision: nfs-tftp-again
