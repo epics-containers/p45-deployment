@@ -50,8 +50,3 @@ ec_services:
     enabled: false
   bl45p-mo-brick-01:
     enabled: true
-
-  # example entry
-  #   p45-ea-test-01:
-  #     enabled: true
-  #     targetRevision: main
