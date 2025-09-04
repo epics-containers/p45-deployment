@@ -38,8 +38,6 @@ ec_services:
   #            the path is always services/<service> within that repo
   #     removed: set to true to remove the service from the cluster
   #     enabled: set to false to stop a service
-  p45-ea-test-01:
-    enabled: false
   bl45p-ea-dcam-01:
     enabled: false
   bl45p-ea-dcam-02:
