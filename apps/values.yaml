@@ -8,10 +8,10 @@
 # services should be running on the cluster. It is recommended that this repo
 # be updated by a CI/CD pipeline or configuration tools only.
 
-project: p45-beamline
+project: hgv27681
 destination:
   name: pollux
-  namespace: p45-beamline
+  namespace: hgv27681
 source:
   repoURL: https://github.com/epics-containers/p45-services
   targetRevision: main
@@ -38,6 +38,7 @@ ec_services:
   #            the path is always services/<service> within that repo
   #     removed: set to true to remove the service from the cluster
   #     enabled: set to false to stop a service
+<<<<<<< before updating
   p45-ea-test-01:
     enabled: false
   bl45p-ea-dcam-01:
@@ -58,3 +59,10 @@ ec_services:
   nfsv2-tftp:
     enabled: true
     targetRevision: nfs-tftp-again
+=======
+
+  # example entry
+  #   p45-ea-test-01:
+  #     enabled: true
+  #     targetRevision: main
+>>>>>>> after updating

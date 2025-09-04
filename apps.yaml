@@ -1,6 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+<<<<<<< before updating
   name: bl45p
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,6 +10,17 @@ spec:
   destination:
     name: argus
     namespace: bl45p
+=======
+  name: p45
+  namespace: hgv27681
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: hgv27681
+  destination:
+    name: argus
+    namespace: hgv27681
+>>>>>>> after updating
   source:
     path: apps
     repoURL: https://github.com/epics-containers/bl45p-apps.git
