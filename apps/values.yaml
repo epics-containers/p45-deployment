@@ -42,7 +42,7 @@ ec_services:
     enabled: false
   bl45p-ea-dcam-01:
     targetRevision: 2024.11.1
-    enabled: true
+    enabled: false
   bl45p-ea-dcam-02:
     targetRevision: 2024.11.1
     enabled: true
