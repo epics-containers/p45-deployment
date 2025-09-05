@@ -41,7 +41,7 @@ ec_services:
   bl45p-ea-dcam-01:
     enabled: false
   bl45p-ea-dcam-02:
-    enabled: true
+    enabled: false
   bl45p-mo-panda-01:
     enabled: false
   bl45p-mo-panda-02:
