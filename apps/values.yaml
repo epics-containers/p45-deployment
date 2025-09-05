@@ -48,3 +48,6 @@ ec_services:
     enabled: false
   bl45p-mo-brick-01:
     enabled: true
+  bl45p-ea-ioc-01:
+    enabled: true
+    targetRevision: dev-c7
