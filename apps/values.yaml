@@ -38,7 +38,6 @@ ec_services:
   #            the path is always services/<service> within that repo
   #     removed: set to true to remove the service from the cluster
   #     enabled: set to false to stop a service
-<<<<<<< before updating
   p45-ea-test-01:
     enabled: false
   bl45p-ea-dcam-01:
@@ -59,10 +58,3 @@ ec_services:
   nfsv2-tftp:
     enabled: true
     targetRevision: nfs-tftp-again
-=======
-
-  # example entry
-  #   p45-ea-test-01:
-  #     enabled: true
-  #     targetRevision: main
->>>>>>> after updating
