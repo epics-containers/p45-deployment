@@ -14,7 +14,7 @@ destination:
   namespace: hgv27681
 source:
   repoURL: https://github.com/epics-containers/p45-services
-  targetRevision: main
+  targetRevision: dev-c7
 
 services:
   # Each item is of the form:
@@ -38,23 +38,13 @@ ec_services:
   #            the path is always services/<service> within that repo
   #     removed: set to true to remove the service from the cluster
   #     enabled: set to false to stop a service
-  p45-ea-test-01:
-    enabled: false
   bl45p-ea-dcam-01:
-    targetRevision: 2024.11.1
     enabled: false
   bl45p-ea-dcam-02:
-    targetRevision: 2024.11.1
-    enabled: false
+    enabled: true
   bl45p-mo-panda-01:
-    targetRevision: 2024.11.1
     enabled: false
   bl45p-mo-panda-02:
-    targetRevision: 2024.11.1
     enabled: false
   bl45p-mo-brick-01:
-    targetRevision: 2024.11.1
     enabled: true
-  nfsv2-tftp:
-    enabled: true
-    targetRevision: nfs-tftp-again
