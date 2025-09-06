@@ -39,8 +39,10 @@ ec_services:
   #     removed: set to true to remove the service from the cluster
   #     enabled: set to false to stop a service
   bl45p-ea-dcam-01:
+    targetRevision: dev-c7
     enabled: false
   bl45p-ea-dcam-02:
+    targetRevision: dev-c7
     enabled: false
   bl45p-mo-panda-01:
     enabled: false
