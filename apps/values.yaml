@@ -14,7 +14,7 @@ destination:
   namespace: hgv27681
 source:
   repoURL: https://github.com/epics-containers/p45-services
-  targetRevision: dev-c7
+  targetRevision: main
 
 services:
   # Each item is of the form:
