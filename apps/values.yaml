@@ -51,3 +51,6 @@ ec_services:
   bl45p-ea-ioc-01:
     enabled: true
     targetRevision: dev-c7
+  bl45p-mo-ioc-01:
+    enabled: true
+    targetRevision: dev-c7
