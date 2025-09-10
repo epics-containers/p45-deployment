@@ -24,5 +24,9 @@ appVersion: "1.0"
 
 dependencies:
   - name: argocd-apps
+<<<<<<< before updating
     version: 4.4.4-beta.3
+=======
+    version: 4.4.3
+>>>>>>> after updating
     repository: "oci://ghcr.io/epics-containers"
