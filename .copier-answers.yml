@@ -1,10 +1,10 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 4.4.0
+_commit: 4.4.0-6-g457d79d
 _src_path: https://github.com/epics-containers/deployment-template-argocd
 argocd_cluster: argus
 argocd_server: argocd.diamond.ac.uk
 cluster_name: pollux
-cluster_namespace: hgv27681
+cluster_namespace: p45-beamline
 deployment_repo: https://github.com/epics-containers/p45-deployment
 description: p45 IOC Instances and Services
 git_platform: github.com
