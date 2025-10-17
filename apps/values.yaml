@@ -23,21 +23,13 @@ services:
   #     repoURL: optional override for git repo to source the helm chart from
   #            the path is always services/<service> within that repo
   #     removed: set to true to remove the service from the cluster
-  epics-pvcs:
-  epics-opis:
+  #     enabled: set to false to stop a service
+  p45-epics-pvcs:
+  p45-epics-opis:
   # daq-rabbitmq:
   # daq-blueapi:
   # daq-nexus:
 
-ec_services:
-  # Services which have implemented support for an "enabled" parameter.
-  # Each item is of the form:
-  #   service: service name as it appears in K8S (statefulset/deployment name)
-  #     targetRevision: optional override for targetRevision above
-  #     repoURL: optional override for git repo to source the helm chart from
-  #            the path is always services/<service> within that repo
-  #     removed: set to true to remove the service from the cluster
-  #     enabled: set to false to stop a service
   bl45p-ea-dcam-01:
     enabled: false
   bl45p-ea-dcam-02:
